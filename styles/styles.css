@@ -19,6 +19,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  margin-inline: auto;
 }
 
 header.balance {
@@ -92,6 +93,11 @@ header.balance aside .outline {
   flex-direction: column;
   align-items: center;
 }
+@media only screen and (min-width: 380px) {
+  .card .chart figure {
+    width: 50px;
+  }
+}
 .card .chart figure:hover .bar {
   background-color: #f29e8d;
   cursor: pointer;
@@ -157,4 +163,4 @@ header.balance aside .outline {
 .card footer .prev_month h5 {
   margin-bottom: 0;
   text-align: right;
-} /*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
