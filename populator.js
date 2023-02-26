@@ -1,14 +1,19 @@
 const dynamic = document.getElementById("chart");
 
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const options = { weekday: "short" };
+
+const dateStr = date.toLocaleDateString(undefined, options).toLowerCase();
+
 if (dynamic) {
   fetch("./data.json")
     .then((response) => response.json())
     .then((data) => {
       data.forEach((result) => {
         dynamic.innerHTML += `
-              <figure class="day" id="${result.day}" onClick="setActive(${
-          result.day
-        })">
+              <figure class="day  ${
+                result.day == dateStr ? "active" : ""
+              }" id="${result.day}" onClick="setActive(${result.day})">
               <div class="hover_display">${result.amount}</div>
               <div
 

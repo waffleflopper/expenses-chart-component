@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  padding: 30px 10px;
+  padding: 60px 10px;
   background-color: hsl(29, 62%, 91%);
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
@@ -124,9 +124,15 @@ header.balance aside .outline {
   color: hsl(33, 100%, 98%);
   background-color: hsl(25, 47%, 15%);
   padding: 5px;
+  margin-inline: auto;
   margin-bottom: 5px;
   border-radius: 3px;
   transition: all 550ms ease;
+}
+@media only screen and (min-width: 380px) {
+  .card .chart figure .hover_display {
+    font-size: 16px;
+  }
 }
 .card .chart figure:hover .hover_display {
   opacity: 1;

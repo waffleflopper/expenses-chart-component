@@ -27,7 +27,7 @@ $bold-weight: 500;
 
 body {
   margin: 0;
-  padding: 30px 10px;
+  padding: 60px 10px;
   background-color: $background;
   font-family: $font-family;
   font-size: $font-size;
@@ -145,9 +145,13 @@ header.balance {
         color: $text-light;
         background-color: $text-dark;
         padding: 5px;
+        margin-inline: auto;
         margin-bottom: 5px;
         border-radius: 3px;
         transition: all 550ms ease;
+        @media only screen and (min-width: 380px) {
+          font-size: 16px;
+        }
       }
 
       &:hover .hover_display {
