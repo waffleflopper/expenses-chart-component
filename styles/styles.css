@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 10px;
+  background-color: hsl(29, 62%, 91%);
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+main {
+  min-width: 340px;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+header.balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(10, 79%, 65%);
+  width: 100%;
+  border-radius: 10px;
+  color: hsl(33, 100%, 98%);
+  padding: 15px;
+}
+header.balance figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+header.balance figure p {
+  all: unset;
+}
+header.balance figure .text {
+  font-size: 15px;
+  color: rgba(255, 250, 245, 0.75);
+}
+header.balance figure h3 {
+  margin: 5px 0;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.7;
+}
+header.balance aside {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+header.balance aside .circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+header.balance aside .filled {
+  background-color: hsl(25, 47%, 15%);
+}
+header.balance aside .outline {
+  position: absolute;
+  right: 20px;
+  border: solid 2px hsl(33, 100%, 98%);
+}
+
+.card {
+  width: 100%;
+  background-color: hsl(33, 100%, 98%);
+  border-radius: 10px;
+  padding: 15px;
+}
+.card .chart {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: flex-end;
+  min-height: 220px;
+  justify-content: space-around;
+}
+.card .chart figure {
+  margin: 0;
+  width: 32px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card .chart figure:hover .bar {
+  background-color: #f29e8d;
+  cursor: pointer;
+}
+.card .chart figure.active .bar {
+  background-color: hsl(186, 34%, 60%);
+}
+.card .chart figure.active .hover_display {
+  opacity: 1;
+}
+.card .chart figure.active:hover .bar {
+  background-color: #98c7cd;
+}
+.card .chart figure .bar {
+  transition: all 100ms ease-in-out;
+  background-color: hsl(10, 79%, 65%);
+  content: "";
+  width: 100%;
+  border-radius: 3px;
+  min-height: 25px;
+}
+.card .chart figure .hover_display {
+  opacity: 0;
+  color: hsl(33, 100%, 98%);
+  background-color: hsl(25, 47%, 15%);
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  transition: all 550ms ease;
+}
+.card .chart figure:hover .hover_display {
+  opacity: 1;
+}
+.card .divider {
+  background-color: hsl(29, 62%, 91%);
+  width: 100%;
+  height: 2px;
+  margin-block: 8px;
+}
+.card h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+.card footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.card footer p {
+  font-size: 15px;
+  color: hsl(28, 10%, 53%);
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.card footer .current-total h2 {
+  font-size: 36px;
+  font-weight: 500;
+}
+.card footer .prev_month p {
+  margin-top: 0;
+}
+.card footer .prev_month h5 {
+  margin-bottom: 0;
+  text-align: right;
+} /*# sourceMappingURL=styles.css.map */

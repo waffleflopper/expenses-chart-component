@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <link
+      rel="stylesheet"
+      href="styles/styles.css" />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <main>
+      <header class="balance">
+        <figure>
+          <p class="text">My balance</p>
+          <h3>$921.48</h3>
+        </figure>
+        <aside>
+          <div class="circle outline"></div>
+          <div class="circle filled"></div>
+        </aside>
+      </header>
+
+      <section class="card">
+        <h2>Spending - Last 7 days</h2>
+        <main
+          class="chart"
+          id="chart"></main>
+        <div class="divider"></div>
+        <footer>
+          <div class="current-total">
+            <p>Total this month</p>
+            <h2>$478.33</h2>
+          </div>
+          <div class="prev_month">
+            <h5>+2.4%</h5>
+            <p>from last month</p>
+          </div>
+        </footer>
+      </section>
+    </main>
+    <script src="populator.js"></script>
+    <!-- My balance $921.48 Spending - Last 7 days mon tue wed thu fri sat sun Total
+    this month $478.33 +2.4% from last month -->
+  </body>
+</html>

@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap");
+
+$mobile-break: 375px;
+$min-width: 340px;
+$max-width: 540px;
+
+$primary: hsl(10, 79%, 65%);
+$secondary: hsl(186, 34%, 60%);
+
+$background: hsl(29, 62%, 91%);
+$card-bg: hsl(33, 100%, 98%);
+$text-dark: hsl(25, 47%, 15%);
+$text-neutral: hsl(28, 10%, 53%);
+$text-light: hsl(33, 100%, 98%);
+
+$circle-diameter: 40px;
+$card-radius: 10px;
+
+$font-size: 18px;
+$font-family: "DM Sans", sans-serif;
+$normal-weight: 300;
+$bold-weight: 500;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 10px;
+  background-color: $background;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $normal-weight;
+}
+
+main {
+  min-width: $min-width;
+  max-width: $max-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+header.balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary;
+  width: 100%;
+  border-radius: $card-radius;
+  color: $text-light;
+  padding: 15px;
+  figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    p {
+      all: unset;
+    }
+    .text {
+      font-size: 15px;
+      color: rgba($text-light, 0.75);
+    }
+    h3 {
+      margin: 5px 0;
+      font-size: 24px;
+      font-weight: $normal-weight;
+      letter-spacing: 0.7;
+    }
+  }
+  aside {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    .circle {
+      height: $circle-diameter;
+      width: $circle-diameter;
+      border-radius: 50%;
+    }
+    .filled {
+      background-color: $text-dark;
+    }
+    .outline {
+      position: absolute;
+      right: 20px;
+      border: solid 2px $text-light;
+    }
+  }
+}
+
+.card {
+  width: 100%;
+  background-color: $card-bg;
+  border-radius: $card-radius;
+  padding: 15px;
+  .chart {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: flex-end;
+
+    min-height: 220px;
+    justify-content: space-around;
+    figure {
+      margin: 0;
+      width: 32px;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .bar {
+        &.active {
+          background-color: $secondary;
+        }
+        transition: all 100ms ease-in-out;
+        background-color: $primary;
+        content: "";
+        width: 100%;
+        border-radius: 3px;
+        min-height: 25px;
+      }
+
+      .hover_display {
+        opacity: 0;
+        color: $text-light;
+        background-color: $text-dark;
+        padding: 5px;
+        margin-bottom: 5px;
+        border-radius: 3px;
+        transition: all 550ms ease;
+      }
+      &:hover .bar {
+        background-color: lighten($primary, 10%);
+        cursor: pointer;
+        &.active {
+          background-color: lighten($secondary, 10%);
+          .hover_display {
+            opacity: 1;
+          }
+        }
+      }
+      &:hover .hover_display {
+        opacity: 1;
+      }
+    }
+  }
+  .divider {
+    background-color: $background;
+    width: 100%;
+    height: 2px;
+    margin-block: 8px;
+  }
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: $bold-weight;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    p {
+      font-size: 15px;
+      color: $text-neutral;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    .current-total {
+      h2 {
+        font-size: 36px;
+        font-weight: $bold-weight;
+      }
+    }
+    .prev_month {
+      p {
+        margin-top: 0;
+      }
+      h5 {
+        margin-bottom: 0;
+        text-align: right;
+      }
+    }
+  }
+}
