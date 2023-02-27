@@ -5,7 +5,6 @@ const options = { weekday: "short" };
 
 const dateStr = date.toLocaleDateString(undefined, options).toLowerCase();
 
-if (dynamic) {
   fetch("./data.json")
     .then((response) => response.json())
     .then((data) => {
@@ -25,7 +24,6 @@ if (dynamic) {
       });
     })
     .catch((error) => console.log(error));
-}
 
 function setActive(day) {
   const elements = document.getElementsByClassName("day");
