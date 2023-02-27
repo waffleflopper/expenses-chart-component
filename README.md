@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL @ [Github Repository](https://your-solution-url.com)
-- Live Site URL @ [Github Pages](https://your-live-site-url.com)
+- Solution URL @ [Github Repository](https://github.com/waffleflopper/expenses-chart-component)
+- Live Site URL @ [Github Pages](https://waffleflopper.github.io/expenses-chart-component/)
 
 ## My process
 
