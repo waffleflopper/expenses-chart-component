@@ -32,19 +32,19 @@ header.balance {
   color: hsl(33, 100%, 98%);
   padding: 15px;
 }
-header.balance figure {
+header.balance section {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
-header.balance figure p {
+header.balance section p {
   all: unset;
 }
-header.balance figure .text {
+header.balance section .text {
   font-size: 15px;
   color: rgba(255, 250, 245, 0.75);
 }
-header.balance figure h3 {
+header.balance section p {
   margin: 5px 0;
   font-size: 24px;
   font-weight: 300;
@@ -148,25 +148,25 @@ header.balance aside .outline {
   font-size: 24px;
   font-weight: 500;
 }
-.card footer {
+.card section {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-.card footer p {
+.card section p {
   font-size: 15px;
   color: hsl(28, 10%, 53%);
   font-weight: 400;
   margin-bottom: 0;
 }
-.card footer .current-total h2 {
+.card section .current-total h2 {
   font-size: 36px;
   font-weight: 500;
 }
-.card footer .prev_month p {
+.card section .prev_month p {
   margin-top: 0;
 }
-.card footer .prev_month h5 {
+.card section .prev_month h3 {
   margin-bottom: 0;
   text-align: right;
 }/*# sourceMappingURL=styles.css.map */

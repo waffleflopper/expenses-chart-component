@@ -2,29 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png" />
-    <link
-      rel="stylesheet"
-      href="styles/styles.css" />
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
 
     <title>Frontend Mentor | Expenses chart component</title>
   </head>
   <body>
     <main>
       <header class="balance">
-        <figure>
-          <p class="text">My balance</p>
-          <h3>$921.48</h3>
-        </figure>
+        <section>
+          <h1 class="text">My balance</h1>
+          <p>$921.48</p>
+        </section>
         <aside>
           <div class="circle outline"></div>
           <div class="circle filled"></div>
@@ -33,20 +30,18 @@
 
       <section class="card">
         <h2>Spending - Last 7 days</h2>
-        <main
-          class="chart"
-          id="chart"></main>
+        <section class="chart" id="chart"></section>
         <div class="divider"></div>
-        <footer>
+        <section>
           <div class="current-total">
             <p>Total this month</p>
             <h2>$478.33</h2>
           </div>
           <div class="prev_month">
-            <h5>+2.4%</h5>
+            <h3>+2.4%</h3>
             <p>from last month</p>
           </div>
-        </footer>
+        </section>
       </section>
     </main>
     <script src="populator.js"></script>
